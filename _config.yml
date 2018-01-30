@@ -1,10 +1,10 @@
 # Site settings
-title: Working Title
+title: Career_2.0
 header-img: img/home-bg.png
 email: thurman024@gmail.com
 copyright_name: thurman024
 description: > # this means to ignore newlines until "baseurl:"
-  Working Subtitle
+  observations while developing my next release version
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  thurman024

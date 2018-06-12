@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Patterns in JS"
-date:       2018-06-12 22:20:19 +0000
+date:       2018-06-12 18:20:20 -0400
 permalink:  patterns_in_js
 ---
 
@@ -21,7 +21,7 @@ $(function( ) {
  })	
 ```
  
- 2. **Call a backend route that will provide the necessary data** - for example, your controller's #show action could be modified to render .json information as done in several lessons.  There may be situations where you create a new route and action.  Either way, you are essentially making an internal API call. There are several methods like ajax, fetch, etc., but jquery provides a nice shorthand.
+2) **Call a backend route that will provide the necessary data** - for example, your controller's #show action could be modified to render .json information as done in several lessons.  There may be situations where you create a new route and action.  Either way, you are essentially making an internal API call. There are several methods like ajax, fetch, etc., but jquery provides a nice shorthand.
 
 ```// continuing...
 $.get("/my-route/:${mightIncludeID}", response => {
@@ -29,7 +29,7 @@ $.get("/my-route/:${mightIncludeID}", response => {
 	 //  call another function that handles your response (step 3)
 })```
 
-3. **Instantiate a JS model object to handle data** - Odds are, the information you requested from your internal API is all or some of the data associated with one of your Ruby models.  You can recreate that model in your JS file as a tidy, modular way to handle the data the rest of the way. Adding to the previous code snippet...
+3) **Instantiate a JS model object to handle data** - Odds are, the information you requested from your internal API is all or some of the data associated with one of your Ruby models.  You can recreate that model in your JS file as a tidy, modular way to handle the data the rest of the way. Adding to the previous code snippet...
 
 ```
 $.get("/my-route/:${mightIncludeID}", response => {
@@ -47,7 +47,7 @@ function MyModel(attr_hash) {
 }
 ```
 
-4.  **Format your data how it should be added to the page** - a nice way to do this (as well as check off a project requirement) is through a model prototype method.  The end result should the the exact html that belongs in the view. Wrap your return string in backticks, and interpolate data from the model as needed.  You will want to call this method on the variable `newObject` within the code snippet of step 3.
+4)  **Format your data how it should be added to the page** - a nice way to do this (as well as check off a project requirement) is through a model prototype method.  The end result should the the exact html that belongs in the view. Wrap your return string in backticks, and interpolate data from the model as needed.  You will want to call this method on the variable `newObject` within the code snippet of step 3.
 
 ```
 MyModel.prototype.formatModel = function () {
@@ -57,7 +57,7 @@ MyModel.prototype.formatModel = function () {
 }
 ```
 
-5. **Inject the html into the page** - whether you want to append or replace, use the necessary jquery tools to grab the correct html element from the view and inject your new html.  Combining the code from 3-5, it will flow something like this:
+5) **Inject the html into the page** - whether you want to append or replace, use the necessary jquery tools to grab the correct html element from the view and inject your new html.  Combining the code from 3-5, it will flow something like this:
 
 ```
 let newObject = new MyModel(response) // (step 3)

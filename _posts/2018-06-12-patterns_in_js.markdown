@@ -8,7 +8,7 @@ permalink:  patterns_in_js
 
 I spent a lot of time trying to think out my fourth project (Rails + JS) with very little results.  Through the first 3 sections,  I felt comfortably proficient in the patterns I would need to put together my portfolio project.  But I realized with Javascript, I had no recognizable pattern imprinted in my brain to follow.  So after the process of working through my project,  here is a pattern that may be useful to someone somewhere.
 
-Let's say the goal is to let a user click a link/button and have more informations displayed on the page without a refresh.  This is one of the main practices learned through the JS section and needed for the final project.
+Let's say the goal is to let a user click a link/button and have more information displayed on the page without a refresh.  This is one of the main practices learned through the JS section and needed for the final project.
 
 1. **Implement the initializer action** - whether you need to add a link to the view or repurpose and existing one, the first step should be writing the JS code to trigger this whole sequence of events.  Giving your button/link a unique CSS identifier, you can use jquery to add an event handler that will execute the rest of the code upon being clicked. You can test functionality this far by adding an alert.
 

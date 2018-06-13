@@ -23,11 +23,13 @@ $(function( ) {
  
 2) **Call a backend route that will provide the necessary data** - for example, your controller's #show action could be modified to render .json information as done in several lessons.  There may be situations where you create a new route and action.  Either way, you are essentially making an internal API call. There are several methods like ajax, fetch, etc., but jquery provides a nice shorthand.
 
-```// continuing...
+```
+// continuing...
 $.get("/my-route/:${mightIncludeID}", response => {
    console.log(response)
 	 //  call another function that handles your response (step 3)
-})```
+})
+```
 
 3) **Instantiate a JS model object to handle data** - Odds are, the information you requested from your internal API is all or some of the data associated with one of your Ruby models.  You can recreate that model in your JS file as a tidy, modular way to handle the data the rest of the way. Adding to the previous code snippet...
 
@@ -65,5 +67,5 @@ let newHtml = newObject.formatModel() // (step 4)
 $("div.for-new-object).html(newHtml) // (step 5)
 ```
 
-That's it!  As always, you can refractor this code by breaking it into module functions.  But hopefully this explanation combines some JS concepts to paint a broad pattern to utilize in your project.
+That's it!  As always, you can refractor this code by breaking it into modular functions.  But hopefully this explanation combines some JS concepts to paint a broad pattern to utilize in your project.
 

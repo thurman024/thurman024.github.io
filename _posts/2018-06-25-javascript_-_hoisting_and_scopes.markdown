@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Javascript - Hoisting and Scopes"
-date:       2018-06-25 23:01:05 +0000
+date:       2018-06-25 19:01:05 -0400
 permalink:  javascript_-_hoisting_and_scopes
 ---
 
@@ -10,20 +10,22 @@ A confusing nuance for beginners in Javascript are the concepts of hoisting and 
 
 **Variable definition (var, let, const)**
 
-As you've learned in ES6, there are three ways to define a variable.  Var and Let differ in scope - but only scopes created by code blocks such as loops.  Within a function's scope, Var and Let perform the same
+As you've learned in ES6, there are three ways to define a variable.  `Var` and `let` differ in scope - but only scopes created by code blocks such as loops.  Within a function's scope, `var` and `let` perform the same
 
 ```
 // Global Scope
 function firstFunc() {
   // First scope
   var testVar = "hello"
-	let testLet = "world"
+  let testLet = "world"
 }
-testVar; // => undefined
-testLet; // => undefined
+testVar; // => *undefined*
+testLet; // => *undefined*
 ```
 
-As you see here, our two variables are locally scoped within our `firstFunc()`.  Const and Let are identical in all scopes, but using const prevents the value of the variable from being reassigned.
+As you see here, our two variables are locally scoped within our `firstFunc()`.  
+
+`Const` and `let` are identical in all scopes, but using const prevents the value of the variable from being reassigned.
 
 **Anonymous Functions**
 
